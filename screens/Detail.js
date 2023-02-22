@@ -8,7 +8,7 @@ function Detail({navigation}) {
   const[bilar, setbilar] = useState ([]);
   if(isLoading == true){
 
-  fetch('http://localhost:9000/bilar')
+  fetch('https://teal-aggressive-cougar.cyclic.app/bilar')
   .then(response => response.json())
   .then(json => {
     console.log(json.bilar);
