@@ -1,13 +1,16 @@
 // screens/Home.js
 
 import React from "react";
-import { Button, StyleSheet, View, Text } from "react-native";
+import { Button, StyleSheet, View, Text, Image } from "react-native";
 
+
+const PlaceholderImage = require('../assets/icon-384x384.png');
 
 function Home({navigation}) {
 return(
     <View style={styles.container}>
-        <Text style={styles.text}>Hemma Screen</Text>
+        <Image source={PlaceholderImage} style={styles.image} />
+        <Text style={styles.text}>Martins Bilar</Text>
         <Button
         title="Go to details"
         onPress={() => navigation.navigate('Detail')} />
@@ -25,7 +28,11 @@ const styles = StyleSheet.create({
     text: {
         color: '#101010',
         fontSize: 24,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+    },
+    image: {
+      width: 250,
+      height: 250,
     }
   });
 export default Home;
