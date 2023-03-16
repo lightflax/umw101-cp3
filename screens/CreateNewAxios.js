@@ -57,8 +57,8 @@ const onSubmitFormHandler = async (event) => {
       price,
       year,
     });
-    if (response.status === 201) {
-      alert(` You have created: ${JSON.stringify(response.data)}`);
+    if (response.status === 200) {
+      alert(` YOU HAVE SUCCESSFULLY CREATED AN AD WITH ID: ${JSON.stringify(response.data._id)}`);
       setIsLoading(false);
       setReg('');
       setColor('');
@@ -69,11 +69,11 @@ const onSubmitFormHandler = async (event) => {
 
     } else {
       console.log(error.response)
-      throw new Error("An error has occurred");
+      throw new Error("1.An error has occurred");
   
     }
   } catch (error) {
-    alert("An error has occurred");
+    alert("2.An error has occurred");
     setIsLoading(false);
   
   }

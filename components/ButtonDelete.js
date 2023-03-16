@@ -1,9 +1,9 @@
 import { StyleSheet, View, Pressable, Text } from "react-native";
 
-function Button({ label }){
+function ButtonDelete({ label }){
     return(
         <View style={styles.buttonContainer}>
-            <Pressable style={styles.button} onPress={() => alert('Du tryckte på knappen')}>
+            <Pressable style={styles.button}  onPress={() => navigation.navigate('Delete')}>
                 <Text style={styles.buttonLabel}>{label}</Text>
             </Pressable>
         </View>
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Button;
+export default ButtonDelete;
